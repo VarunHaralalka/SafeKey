@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeKey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+        <div class="password-box">
+            <input type="text" id="password" readonly>
+            <button id="copy" onclick="copyPassword()">Copy</button>
+        </div>
+        <div class="controls">
+            <label for="length">Length: <span id="lengthValue">8</span></label>
+            <input type="range" id="length" min="8" max="15" value="8" oninput="updateLength(this.value)">
+        </div>
+        <div class="options">
+            <label><input type="checkbox" id="includeNumbers"> Include Numbers</label>
+            <label><input type="checkbox" id="includeSymbols"> Include Symbols</label>
+        </div>
+        <button id="generate" onclick="generatePassword()">Generate Password</button>
+        <button id="shuffle" onclick="shufflePassword()">Shuffle Password</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
